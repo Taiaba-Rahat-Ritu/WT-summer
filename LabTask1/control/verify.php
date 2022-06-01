@@ -48,34 +48,34 @@ if(isset($_REQUEST["designation"]))
 }
 else
 {
-    echo "Must select designation" . "<br>";
+    echo "Select your designation." . "<br>";
 }
 
 
 if(isset($_REQUEST["JAVA"]) || isset($_REQUEST["PHP"]) || isset($_REQUEST["C++"])){
     if(isset($_REQUEST["JAVA"]) && isset($_REQUEST["PHP"])){
-        echo "Preferred language is " . $_REQUEST["JAVA"] . " and " . $_REQUEST["PHP"];
+        echo "Your preferred language is " . $_REQUEST["JAVA"] . " and " . $_REQUEST["PHP"];
     }
     elseif(isset($_REQUEST["PHP"]) && isset($_REQUEST["C++"])){
-        echo "Preferred language is " . $_REQUEST["PHP"] . " and " . $_REQUEST["C++"];
+        echo "Your preferred language is " . $_REQUEST["PHP"] . " and " . $_REQUEST["C++"];
     }
     elseif(isset($_REQUEST["JAVA"]) && isset($_REQUEST["C++"])){
-        echo "Preferred language is " . $_REQUEST["JAVA"] . " and " . $_REQUEST["C++"];
+        echo "Your preferred language is " . $_REQUEST["JAVA"] . " and " . $_REQUEST["C++"];
     }
     elseif(isset($_REQUEST["JAVA"])){
-        echo "Preferred language is " . $_REQUEST["JAVA"];
+        echo "Your preferred language is " . $_REQUEST["JAVA"];
     }
     elseif(isset($_REQUEST["PHP"])){
-        echo "Preferred language is " . $_REQUEST["PHP"];
+        echo "Your preferred language is " . $_REQUEST["PHP"];
     }
     elseif(isset($_REQUEST["C++"])){
-        echo "Preferred language is " . $_REQUEST["C++"];
+        echo "Your preferred language is " . $_REQUEST["C++"];
     }
 
 }
 else
 {
-    echo "Must select preferred language" . "<br>";
+    echo "Select your preferred language." . "<br>";
 }
 
 
