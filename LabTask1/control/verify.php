@@ -1,8 +1,10 @@
 <?php
 
 $fnameError = "";
+$lnameError = "";
 
-if(isset($_POST["submission"])){
+if(isset($_POST["submission"]))
+{
     $fname = $_REQUEST["fname"];
     $lname = $_REQUEST["lname"];
     $age = $_REQUEST["age"];
@@ -11,26 +13,26 @@ if(isset($_POST["submission"])){
 
 
 
-if($fname=="")
+if(empty($fname))
 {
-   echo "First name is required!" ."<br>";
+   $fnameError = "First name is required!" ."<br>";
 }
 else{
-    echo "First name is" .$fname ."<br>";
+    $fnameError = "First name is " .$fname ."<br>";
 }
-if($lname=="")
+if(empty($lname))
 {
     echo "Last name is required!" ."<br>";
 }
 else{
-    echo "Last name is" .$lname;
+    echo "Last name is " .$lname."<br>";
 }
-if($email=="")
+if(empty($email))
 {
     echo "Email is required!" ."<br>";
 }
 else{
-    echo "Email is" .$email;
+    echo "Email is " .$email ."<br>";
 }
 
 if(strlen($password) <8)
@@ -81,6 +83,31 @@ else
 {
     echo "Select your preferred language." . "<br>";
 }
+$formdata = array(
+    'fname' =>$_POST['fname'],
+    'lname' =>$_POST['lname'],
+    'email' =>$_POST['email'],
+    'password' =>$_POST['password']
+);
+$existingdata = file_get_contents('../Data/data.json');
+$tempJSONdata = json_decode($existingdata);
+$tempJSONdata[] =$formdata;
+//Convert updated array to JSON
+$jsondata = json_encode($tempJSONdata, JSON_PRETTY_PRINT);
 
+//write json data into data.json file
+if(file_put_contents("../Data/data.json", $jsondata)) {
+     echo "Data successfully saved <br>";
+ }
+else 
+{
+     echo "no data saved";
 }
+$data = file_get_contents("../Data/data.json");
+$mydata = json_decode($data);
+
+
+echo "my value: ".$mydata[1]->lname;
+}
+
 ?>
