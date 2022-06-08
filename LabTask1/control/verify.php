@@ -1,18 +1,22 @@
 <?php
-$fname = $_REQUEST["fname"];
-$lname = $_REQUEST["lname"];
-$age = $_REQUEST["age"];
-//$designation = $_POST["designation"];
-//$preferredlanguage = $_POST["preferredlanguage"];
-$email = $_REQUEST["email"];
-$password = $_REQUEST["password"];
+
+$fnameError = "";
+
+if(isset($_POST["submission"])){
+    $fname = $_REQUEST["fname"];
+    $lname = $_REQUEST["lname"];
+    $age = $_REQUEST["age"];
+    $email = $_REQUEST["email"];
+    $password = $_REQUEST["password"];
+
+
 
 if($fname=="")
 {
-    echo "First name is required!" ."<br>";
+   echo "First name is required!" ."<br>";
 }
 else{
-    echo "First name is" .$fname;
+    echo "First name is" .$fname ."<br>";
 }
 if($lname=="")
 {
@@ -78,5 +82,5 @@ else
     echo "Select your preferred language." . "<br>";
 }
 
-
+}
 ?>

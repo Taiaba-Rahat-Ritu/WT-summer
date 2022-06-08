@@ -1,3 +1,6 @@
+<?php
+require("../control/verify.php");
+?>
 <html>
     <head>
         <title>Lab Task 1</title>
@@ -5,7 +8,7 @@
 
     <body>
         <h1>Registration Form</h1>
-        <form action="../control/verify.php" method="REQUEST" >
+        <form action="" method="POST" >
 
             <table>
             
@@ -59,8 +62,8 @@
         
                 <tr>
                     <td>
-                        <input type="submit" value="Submit">
-                    <input type="reset" value="Reset">
+                        <input type="submit" name="submission" value="Submit">
+                    <input type="reset" name="submission" value="Reset">
                     </td>   
                 </tr>
 
