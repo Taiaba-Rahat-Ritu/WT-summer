@@ -88,6 +88,7 @@ $formdata = array(
     'lname' =>$_POST['lname'],
     'email' =>$_POST['email'],
     'password' =>$_POST['password']
+    
 );
 $existingdata = file_get_contents('../Data/data.json');
 $tempJSONdata = json_decode($existingdata);

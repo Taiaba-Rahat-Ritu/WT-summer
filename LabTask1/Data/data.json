@@ -28,5 +28,29 @@
         "lname": "Ritu",
         "email": "taiabarahatritu@gmail.com",
         "password": "abcdefgh"
+    },
+    {
+        "fname": "",
+        "lname": "",
+        "email": "",
+        "password": ""
+    },
+    {
+        "fname": "rames",
+        "lname": "cowan",
+        "email": "sdafsd@gmail.com",
+        "password": "12345"
+    },
+    {
+        "fname": "sumaia",
+        "lname": "T",
+        "email": "sasdfut@gmail.com",
+        "password": "1313"
+    },
+    {
+        "fname": "trytf",
+        "lname": "jhjh",
+        "email": "ghfgfh@gmail.com",
+        "password": "1234"
     }
 ]
