@@ -8,14 +8,27 @@ include("../control/process.php");
         <title>
            Final-Lab-Task
         </title>
+        <link rel= "stylesheet" type="text/css" href="../css/style.css">
     </head>
 
-<body>
-    <h1> Registration</h1>
+    <header>
+    <div class="abc">
+        <h1>ABC Management System</h1>
+        <h3>We Create Future</h3>
+    </div>
+    <div class="navbar">
+        <p>Home &nbsp; &nbsp; &nbsp; &nbsp; About Us &nbsp; &nbsp; &nbsp; &nbsp; Shop</p>
+        
+    </div>
+    </header>
 
-<form action="../control/process.php" method="POST">
-    <table>
-    <tr>
+<body>
+   
+    <h1 class="reg"> Registration Form</h1><hr>
+
+<form action="../control/process.php" method="post">
+    <table id="form">
+        <tr>
     <td>First Name:</td>
     <td><input type="text" name="fname"></td>
     </tr>
@@ -57,15 +70,18 @@ include("../control/process.php");
     <td>
 	<input type="file" ></td>
     </tr>
+</table>
+        
+    <table>
+
     <tr>
-    <td>
-	<input type="submit" value="Submit" name="Submission">
-	<input type="reset" value="Reset" name="rest">
+    <td id="button">
+	<input type="submit" value="Submit" class="button submit" name="Submission">
+	<input type="reset" value="Reset" class="button reset" name="Submission">
     </td>
     </tr>
-
-
-
+    </table>
+    
 </table>
 
 </form>
